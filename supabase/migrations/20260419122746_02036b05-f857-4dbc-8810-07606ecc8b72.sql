@@ -1,0 +1,1 @@
+DELETE FROM products WHERE retailer NOT IN ('Gamma', 'Karwei', 'Hornbach');

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Gardino — fris & natuurlijk
+ * Diepgroen primary, warm crème surface, terracotta CTA.
+ * Alle kleuren in HSL.
+ */
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 150 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 20% 12%;
+
+    --primary: 150 35% 22%;
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 40 30% 93%;
+    --secondary-foreground: 150 20% 12%;
+
+    --muted: 40 25% 92%;
+    --muted-foreground: 150 10% 38%;
+
+    --accent: 18 65% 52%;
+    --accent-foreground: 40 33% 97%;
+
+    --destructive: 0 70% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 20% 86%;
+    --input: 40 20% 86%;
+    --ring: 150 35% 22%;
+
+    --radius: 0.5rem;
+
+    --brand-cream: 40 33% 97%;
+    --brand-sage: 95 20% 78%;
+    --brand-leaf: 130 35% 38%;
+    --brand-forest: 150 35% 22%;
+    --brand-terracotta: 18 65% 52%;
+    --brand-promo-soft: 95 35% 92%;
+
+    --gradient-warm: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 30% 94%) 100%);
+    --gradient-leaf: linear-gradient(135deg, hsl(150 35% 22%) 0%, hsl(130 35% 32%) 100%);
+
+    --shadow-soft: 0 2px 12px -4px hsl(150 30% 12% / 0.08);
+    --shadow-card: 0 8px 24px -10px hsl(150 30% 12% / 0.12);
+    --shadow-cta:  0 8px 24px -8px hsl(18 65% 52% / 0.40);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 150 20% 12%;
+    --sidebar-primary: 150 35% 22%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 40 30% 93%;
+    --sidebar-accent-foreground: 150 20% 12%;
+    --sidebar-border: 40 20% 86%;
+    --sidebar-ring: 150 35% 22%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 40 25% 94%;
+    --card: 150 20% 12%;
+    --card-foreground: 40 25% 94%;
+    --popover: 150 20% 12%;
+    --popover-foreground: 40 25% 94%;
+    --primary: 95 30% 70%;
+    --primary-foreground: 150 20% 12%;
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 40 25% 94%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 18 65% 58%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 25% 94%;
+    --border: 150 15% 22%;
+    --input: 150 15% 22%;
+    --ring: 95 30% 70%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-warm { background: var(--gradient-warm); }
+  .bg-gradient-leaf { background: var(--gradient-leaf); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-cta  { box-shadow: var(--shadow-cta);  }
+  .scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
